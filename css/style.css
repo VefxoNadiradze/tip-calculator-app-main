@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 163px;
+  margin-bottom: 239px;
+  background-color: #c5e4e7;
+}
+
+.container {
+  max-width: 100%;
+  text-align: center;
+}
+
+.calculator {
+  margin-top: 87px;
+  display: flex;
+  column-gap: 48px;
+  background-color: #fff;
+  padding: 32px 32px 32px 48px;
+  border-radius: 25px;
+  box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.2);
+}
+
+.calculate-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.billParent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.billParent .inpTitle label {
+  color: #5e7a7d;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.selectTipParent {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-top: 40px;
+}
+
+.selectTipParent p {
+  color: #5e7a7d;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.selectTipItems {
+  display: grid;
+  grid-template-columns: repeat(3, 117px);
+  column-gap: 14px;
+  row-gap: 16px;
+  max-width: 379px;
+}
+
+.tipBtn {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #00474b;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.tipBtn:hover {
+  background-color: #26c2ae;
+  color: #00474b;
+}
+
+.active {
+  background-color: #26c2ae;
+  color: #00474b;
+}
+
+.selectTipInput {
+  height: 48px;
+  border-radius: 5px;
+  color: #547878;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: 700;
+  outline: none;
+  background-color: #f3f9fa;
+}
+
+.numberOfpeopleParent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  margin-top: 40px;
+}
+
+.numberOfpeopleParent .inpTitle label {
+  color: #5e7a7d;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.inpTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inpTitle span {
+  color: #e17457;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.inpPar {
+  position: relative;
+}
+
+.dollarIcon {
+  position: absolute;
+  left: 19px;
+  top: 16px;
+}
+.personIcon {
+  position: absolute;
+  left: 19px;
+  top: 16px;
+}
+
+.inp {
+  width: 100%;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background-color: #f3f9fa;
+  text-align: right;
+  padding: 6px 17px 6px 19px;
+  color: #00474b;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+}
+
+.result-side {
+  border-radius: 15px;
+  background-color: #00474b;
+  padding: 56px 40px;
+  width: 413px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tip-total {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.result {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result h3 {
+  color: #26c2ae;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.result p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 5px;
+  text-align: left;
+  color: #fff;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.result p span {
+  color: #7f9d9f;
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.resetBtn {
+  margin-top: 134px;
+  border-radius: 5px;
+  background: #26c2ae;
+  color: #00474b;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  padding: 9px 40px;
+  transition: 0.3s ease;
+}
+
+.resetBtn:hover {
+  background-color: #9fe8df;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    margin-top: 163px;
+    margin-bottom: 0px;
+  }
+  .calculator {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 32px 24px;
+  }
+
+  .result-side {
+    margin-top: 32px;
+    width: 100%;
+  }
+
+  .resetBtn {
+    margin-top: 33px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+  .selectTipItems {
+    grid-template-columns: repeat(2, 146px);
+    justify-content: center;
+  }
+
+  .result h3 {
+    font-size: 32px;
+    letter-spacing: -0.667px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .selectTipItems {
+    grid-template-columns: repeat(2, 130px);
+  }
+  .result h3 {
+    font-size: 23px;
+    letter-spacing: -0.667px;
+  }
+
+  .result p {
+    font-size: 13px;
+  }
+}
